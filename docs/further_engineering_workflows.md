@@ -27,7 +27,7 @@ Before configuring the Web browser control, verify the following points:
 > **Note:**
 > Depending on the Industrial Edge application and the system configuration, additional login, permissions or certificate handling may be required.
 
-### Step 1: Add the Web browser control
+### Step 1: Add the Web control
 
 Open the WinCC Unified project in TIA Portal.
 
@@ -43,15 +43,13 @@ The following animation shows how to add the Web browser control to a WinCC Unif
 
 ### Step 2: Configure the dashboard URL
 
-Select the Web browser control.
+Select the **Web control**.
 
-In the property list, configure the URL of the Industrial Edge application or dashboard that should be displayed.
+In the **Properties** tab, expand **General** and enter the URL of the Industrial Edge application or dashboard in the **URL** field.
 
-The following animation shows how to configure the URL of the Web browser control:
+The following animation shows how to configure the URL of the Web control:
 
-![Configure the dashboard URL in the Web browser control properties](graphics/further_engineering/web_browser_control_2_configure_url.gif)
-
-Use the direct URL of the Industrial Edge application or dashboard.
+![Configure the dashboard URL in the Web control properties](graphics/further_engineering/web_browser_control_2_configure_url.gif)
 
 Example for an Energy Manager dashboard:
 
@@ -59,7 +57,7 @@ Example for an Energy Manager dashboard:
 https://<ip-address-of-IED>/energymanager/#/my-plant/<plant-id>/dashboard/<dashboard-id>
 ```
 
-If the Energy Manager dashboard should be displayed without the side bar or navigation bar, add the following HTTP parameter to the end of the URL:
+To display the Energy Manager dashboard in a simplified embedded view, add the following URL parameter:
 
 ```text
 ?embeddedViewMode=readOnly
