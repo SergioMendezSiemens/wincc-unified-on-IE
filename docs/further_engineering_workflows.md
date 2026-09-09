@@ -33,13 +33,13 @@ Open the WinCC Unified project in TIA Portal.
 
 Open the screen where the Industrial Edge application should be displayed.
 
-From the **Toolbox**, drag a **Web browser control** onto the screen.
+In the **Toolbox**, locate the **Web control** and drag it onto the screen.
 
-Resize and position the Web browser control according to the required screen layout.
+The following animation shows how to add the Web control to a WinCC Unified screen:
 
-The following animation shows how to add the Web browser control to a WinCC Unified screen:
+![Drag the Web control onto a WinCC Unified screen](graphics/further_engineering/web_browser_control_1_drag_and_drop.gif)
 
-![Drag the Web browser control onto a WinCC Unified screen](graphics/further_engineering/web_browser_control_1_drag_and_drop.gif)
+After adding the Web control, resize and position it according to the required screen layout.
 
 ### Step 2: Configure the dashboard URL
 
