@@ -2,6 +2,14 @@
 
 This chapter describes additional engineering workflows that can be used together with **SIMATIC WinCC Unified Runtime for Industrial Edge**.
 
+The appropriate workflow depends on the integration scenario and the direction in which data or content should be exchanged.
+
+| Goal | Data or content flow | Recommended workflow |
+| --- | --- | --- |
+| Display an Industrial Edge application or dashboard inside WinCC Unified Runtime | Industrial Edge application → WinCC Unified Runtime | [Display Industrial Edge applications within WinCC Unified Runtime](#how-to-display-industrial-edge-applications-within-wincc-unified-runtime) |
+| Use data from IIH Semantics in WinCC Unified Runtime | IIH Semantics → WinCC Unified Runtime | [Connect WinCC Unified Runtime on Edge with IIH via OPC UA](#connect-wincc-unified-runtime-on-edge-with-iih-via-opc-ua) |
+| Make WinCC Unified HMI variables available in IIH Essentials | WinCC Unified Runtime → IIH Essentials | [Exchange HMI variables with IIH Essentials](#how-to-exchange-hmi-variables-with-iih-essentials) |
+
 ## Table of contents
 
 - [How to display Industrial Edge applications within WinCC Unified Runtime](#how-to-display-industrial-edge-applications-within-wincc-unified-runtime)
