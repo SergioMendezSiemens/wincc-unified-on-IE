@@ -138,37 +138,51 @@ Alternatively, drag an HMI tag directly onto the screen. TIA Portal automaticall
 
 ## OPC UA Server
 
-To operate as an OPC UA server, go to 'Runtime settings' in the left-side menu and enable the OPC UA server checkbox. The default port is 34002 in WinCC Unified Edge RT.
+WinCC Unified Runtime can provide HMI data through its integrated OPC UA server.
 
-![connections6](graphics/connections6.png)
+In the project tree, open **Runtime settings** and enable the **OPC UA server**.
+
+The default OPC UA server port for WinCC Unified Runtime for Industrial Edge is `34002`.
+
+![Enable the OPC UA server](graphics/connections6.png)
 
 ## Load a project into runtime
 
-To load the project in runtime on the Edge Device, you just need to configure its IP adress on the device configuration:
+To download a WinCC Unified project directly from TIA Portal to the Industrial Edge Device, configure the IP address of the target device in the device properties:
 
-![remote2](graphics/remotedown2.png)
+![Configure the Industrial Edge Device IP address](graphics/remotedown2.png)
 
-![remote1](graphics/remotedown1.png)
+Start the download from TIA Portal and select the configured Industrial Edge Device as the target:
 
-### Offline Download
+![Download the project to WinCC Unified Runtime](graphics/remotedown1.png)
 
-In case there is no online connection established to the IED, you have the chance to create an offline runtime project in TIA Portal by drag and drop to the card reader:
+### Offline download
 
-![offdown1](graphics/offdown1.png)
+If a direct online connection between TIA Portal and the Industrial Edge Device is not available, an offline runtime project can be generated in TIA Portal.
 
-Then, in WinCC Unified Runtime on IE you can upload the file that was downloaded by clicking on the 'Upload' button:
+Create the offline runtime project by using the card reader functionality in TIA Portal:
 
-![offdown2](graphics/offdown2.png)
+![Create an offline runtime project](graphics/offdown1.png)
+
+Open **SIMATIC WinCC Unified Runtime Manager** on the Industrial Edge Device and upload the generated runtime project:
+
+![Upload an offline runtime project](graphics/offdown2.png)
 
 ### Offline download via Industrial Edge Management
 
-An offline download to the IE Device is also possible via the IEM. Open the IEM, go to **My Installed Apps** and select **WinCC Unified Runtime**
+An offline runtime project can also be transferred through the Industrial Edge Management (IEM).
 
-![iemdownload](graphics/iem_download.png)
+In the IEM, open **My Installed Apps** and select **SIMATIC WinCC Unified Runtime**:
 
-Once the app's tab is open, click on the **Update configuration** button. Then, add the file in the **+** button within **autoDownload**. After the file is loaded, click on **Update Now**
+![Open WinCC Unified Runtime in the IEM](graphics/iem_download.png)
 
-![iemdownload3](graphics/iem_download3.png)
+Select **Update configuration**.
+
+In the **autoDownload** configuration, click **+** and add the generated offline runtime project file.
+
+After the file has been uploaded, click **Update Now** to transfer the configuration to the Industrial Edge Device:
+
+![Configure autoDownload in the IEM](graphics/iem_download3.png)
 
 ## Alarms
 
