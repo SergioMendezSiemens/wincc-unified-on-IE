@@ -256,11 +256,14 @@ For additional engineering workflows, see:
 
 ## TIA Portal guidelines
 
-In case you need more information related to the engineering of the project in TIA Portal, you can refer to the following [documentation](https://support.industry.siemens.com/cs/document/109782433/simatic-wincc-unified-tutorial-center-(videos)?dti=0&lc=en-WW). In addition, there is an available guideline for efficient engineering in [SIOS](https://support.industry.siemens.com/cs/document/109827603/engineering-guideline-for-wincc-unified?dti=0&lc=en-US).
+For additional information about engineering WinCC Unified projects in TIA Portal, refer to the following Siemens resources:
+
+* [SIMATIC WinCC Unified Tutorial Center](https://support.industry.siemens.com/cs/document/109782433/simatic-wincc-unified-tutorial-center-(videos)?dti=0&lc=en-WW)
+* [Engineering Guideline for WinCC Unified](https://support.industry.siemens.com/cs/document/109827603/engineering-guideline-for-wincc-unified?dti=0&lc=en-US)
 
 ## How to use WinCC Unified Runtime Manager
 
-To open the **SIMATIC WinCC Unified Runtime Manager**, open the **SIMATIC WinCC Unified Runtime** app:
+To open the **SIMATIC WinCC Unified Runtime Manager**, open the **SIMATIC WinCC Unified Runtime** app on the Industrial Edge Device:
 
 ![Open the SIMATIC WinCC Unified Runtime app](graphics/runtime_manager/start1.png)
 
@@ -296,47 +299,51 @@ To add a user or modify access rights, configure the user in the TIA Portal proj
 
 ![Configure users in TIA Portal](graphics/runtime_manager/addUser.png)
 
-When the downloaded project is running, a green status indicator shows that the runtime is ready:
+When the downloaded project is running, a green status indicator shows that the Runtime project is ready:
 
 ![Runtime project ready](graphics/runtime_manager/start2.png)
 
 ### Start the runtime
 
-Click on the WinCC Unified Runtime button:
+In the SIMATIC WinCC Unified Runtime Manager, open the Runtime project:
 
-![start3](graphics/runtime_manager/start3.png)
+![Open the Runtime project](graphics/runtime_manager/start3.png)
 
-And the Start Screen that is indicated in the project will appear:
+The configured **Start Screen** is displayed in Runtime:
 
-![start4](graphics/runtime_manager/start4.jpg)
+![Display the configured Start Screen](graphics/runtime_manager/start4.jpg)
 
 ### Stop the runtime
 
-To stop the runtime, select **Stop Project** in the WinCC Unified Web Runtime Manager:
+To stop the running project, select **Stop Project** in the SIMATIC WinCC Unified Runtime Manager:
 
-![start5](graphics/runtime_manager/start5.png)
+![Stop the Runtime project](graphics/runtime_manager/start5.png)
 
-Wait until the runtime status is on not started, and in the WinCC Runtime app a red light will be now on the project:
+Wait until the project status indicates that the Runtime project is no longer running. The status indicator changes accordingly:
 
-![start7](graphics/runtime_manager/start7.png)
+![Stopped Runtime project](graphics/runtime_manager/start7.png)
 
 ### Secure download
 
-To prevent unauthorized runtime access, activate the secure download option in the TIA Project as well as the WinCC Unified Runtime Manager.
+Secure download can be used to protect project transfer to the Runtime.
 
-TIA Portal:
+Enable secure download both in the TIA Portal project and in the SIMATIC WinCC Unified Runtime Manager.
 
-![secureDown2](graphics/runtime_manager/secureDown2.png)
+Configure secure download in TIA Portal:
 
-WinCC Unified Runtime Manager:
+![Configure secure download in TIA Portal](graphics/runtime_manager/secureDown2.png)
 
-![secureDown1](graphics/runtime_manager/secureDown.png)
+Then enable the corresponding secure download setting in the SIMATIC WinCC Unified Runtime Manager:
+
+![Configure secure download in Runtime Manager](graphics/runtime_manager/secureDown.png)
 
 ### AutoScale
 
-Enabling AutoScale option adapts screen automatically on window size of client / web browser. Screens designed on a certain device with is displayed on another device with different window size maintaining consistency.
+Enable **AutoScale** to automatically adapt the Runtime screen to the available browser or client window size.
 
-![autoScale](graphics/runtime_manager/autoScale.png)
+This allows screens designed for a specific resolution to be scaled when they are displayed on a device with a different window size:
+
+![Configure AutoScale](graphics/runtime_manager/autoScale.png)
 
 ### Media files
 
