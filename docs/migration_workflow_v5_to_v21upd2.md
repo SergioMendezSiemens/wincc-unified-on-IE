@@ -6,6 +6,16 @@ The migration consists of exporting the existing runtime data, replacing the app
 
 The backup and import steps are performed in the **SIMATIC WinCC Unified Runtime Manager**. The uninstall and installation steps are performed from the Industrial Edge Device or the corresponding Industrial Edge app management workflow. The final project download is performed from **TIA Portal V21 Update 2**.
 
+## Table of contents
+
+- [Prerequisites](#prerequisites)
+- [Migration procedure](#migration-procedure)
+  - [Step 1: Create and store a backup in the V5.0.0 app](#step-1-create-and-store-a-backup-in-the-v500-app)
+  - [Step 2: Uninstall the existing V5.0.0 app](#step-2-uninstall-the-existing-v500-app)
+  - [Step 3: Install the V21 Upd 2 app](#step-3-install-the-v21-upd-2-app)
+  - [Step 4: Import the backup into the V21 Upd 2 app](#step-4-import-the-backup-into-the-v21-upd-2-app)
+  - [Step 5: Download the user configuration from TIA Portal and validate the migration](#step-5-download-the-user-configuration-from-tia-portal-and-validate-the-migration)
+
 The basic workflow is:
 
 1. Create a backup in the existing V5.0.0 app and store the backup file safely.
