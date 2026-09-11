@@ -251,7 +251,7 @@ After the Runtime project has been started, the configured values are displayed 
 For additional engineering workflows, see:
 
 * [How to display Industrial Edge applications within WinCC Unified Runtime](further_engineering_workflows.md#how-to-display-industrial-edge-applications-within-wincc-unified-runtime)
-* [Connect WinCC Unified Runtime on Edge with IIH via OPC UA](further_engineering_workflows.md#connect-wincc-unified-runtime-on-edge-with-iih-via-opc-ua)
+* [Connect WinCC Unified Runtime with IIH Semantics via OPC UA](further_engineering_workflows.md#connect-wincc-unified-runtime-with-iih-semantics-via-opc-ua)
 * [How to exchange HMI variables with IIH Essentials](further_engineering_workflows.md#how-to-exchange-hmi-variables-with-iih-essentials)
 
 ## TIA Portal guidelines
