@@ -347,9 +347,34 @@ This allows screens designed for a specific resolution to be scaled when they ar
 
 ### Media files
 
-Upload media files via the Web Runtime Manager to your Unified application and display them via Web Control or Media Control.
+Media files can be uploaded to the Runtime project through the **SIMATIC WinCC Unified Runtime Manager**.
 
-![mediaFiles](graphics/runtime_manager/mediaFiles.png)
+Open the media file management section and upload the required file:
+
+![Upload media files in Runtime Manager](graphics/runtime_manager/mediaFiles.png)
+
+Uploaded files are made available through the Runtime web server and can be accessed using the following URL:
+
+```text
+https://<IED-IP>/WebRH/mediafiles/<FileName>
+```
+
+For example:
+
+```text
+https://<IED-IP>/WebRH/mediafiles/changePassword.png
+```
+
+The URL can be used in a **Web control** to display the uploaded content inside a WinCC Unified screen.
+
+The following file types have been verified with the Web control in V21 Update 2:
+
+* `.png` images
+* `.gif` animations
+* `.mp4` videos
+
+> **Note:**
+> Support for uploading a file through Runtime Manager and support for displaying that file in a specific WinCC Unified control are separate aspects. The target control and client browser must support the corresponding file format.
 
 ## Migration workflow from V5.0.0 to V21 Upd 2
 
