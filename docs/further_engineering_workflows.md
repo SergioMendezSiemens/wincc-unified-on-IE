@@ -10,17 +10,17 @@ This chapter describes additional engineering workflows that can be used togethe
 
 ## How to display Industrial Edge applications within WinCC Unified Runtime
 
-Industrial Edge applications, such as **Energy Manager** or **Performance Insight**, can be displayed inside **SIMATIC WinCC Unified Runtime** by using a **Web browser control** in a WinCC Unified screen.
+Industrial Edge applications, such as **Energy Manager** or **Performance Insight**, can be displayed inside **SIMATIC WinCC Unified Runtime** by using a **Web control** in a WinCC Unified screen.
 
-This allows operators to open Industrial Edge dashboards directly from the WinCC Unified Runtime user interface.
+This allows operators to access Industrial Edge applications and dashboards directly from the WinCC Unified Runtime user interface.
 
 ### Prerequisites
 
-Before configuring the Web browser control, verify the following points:
+Before configuring the Web control, verify the following points:
 
 * All Industrial Edge applications involved in this workflow, including **SIMATIC WinCC Unified Runtime for Industrial Edge**, are installed and running on the same Industrial Edge Device.
-* The dashboard URL of the Industrial Edge application is known.
-* The dashboard URL can be reached from the runtime client where the WinCC Unified screen is opened.
+* The URL of the Industrial Edge application or dashboard is known.
+* The URL can be reached from the runtime client where the WinCC Unified screen is opened.
 * The required user permissions for the Industrial Edge application are available.
 * The WinCC Unified project is available in TIA Portal.
 
@@ -41,23 +41,29 @@ The following animation shows how to add the Web control to a WinCC Unified scre
 
 After adding the Web control, resize and position it according to the required screen layout.
 
-### Step 2: Configure the dashboard URL
+### Step 2: Configure the application or dashboard URL
 
 Select the **Web control**.
 
-In the **Properties** tab, expand **General** and enter the URL of the Industrial Edge application or dashboard in the **URL** field.
+In the **Properties** tab, expand **General > Homepage URL** and enter the URL of the Industrial Edge application or dashboard in the **URL** field.
 
 The following animation shows how to configure the URL of the Web control:
 
-![Configure the dashboard URL in the Web control properties](graphics/further_engineering/web_browser_control_2_configure_url.gif)
+![Configure the URL in the Web control properties](graphics/further_engineering/web_browser_control_2_configure_url.gif)
 
-Example for an Energy Manager dashboard:
+For example, Energy Manager can be opened directly by using the application URL:
+
+```text
+https://<ip-address-of-IED>/energymanager/
+```
+
+A specific Energy Manager dashboard can also be opened directly:
 
 ```text
 https://<ip-address-of-IED>/energymanager/#/my-plant/<plant-id>/dashboard/<dashboard-id>
 ```
 
-To display the Energy Manager dashboard in a simplified embedded view, add the following URL parameter:
+To display an Energy Manager dashboard in a simplified embedded view, add the following URL parameter:
 
 ```text
 ?embeddedViewMode=readOnly
@@ -70,28 +76,32 @@ https://<ip-address-of-IED>/energymanager/#/my-plant/<plant-id>/dashboard/<dashb
 ```
 
 > **Note:**
-> If the URL already contains an HTTP query parameter, append additional parameters with `&` instead of `?`.
+> If the URL already contains a query parameter, append additional parameters with `&` instead of `?`.
 
 ### Step 3: Download and validate the project in runtime
 
 Download the project to **SIMATIC WinCC Unified Runtime for Industrial Edge**.
 
-Start the runtime project and open the screen containing the Web browser control.
+Start the runtime project and open the screen containing the Web control.
 
-Verify that the Industrial Edge application is displayed inside the Web browser control.
+Verify that the Industrial Edge application or dashboard is displayed inside the Web control.
 
-The following animation shows an Industrial Edge application integrated into a WinCC Unified Runtime screen:
+The following animation shows Energy Manager integrated into a WinCC Unified Runtime screen:
 
-![Display an Industrial Edge application in WinCC Unified Runtime](graphics/further_engineering/web_browser_control_3_runtime_integration.gif)
+![Display Energy Manager in WinCC Unified Runtime](graphics/further_engineering/web_browser_control_3_runtime_integration.gif)
 
-If the dashboard is not displayed, verify the following points:
+> **Note:**
+> The Web control displays web content in an iframe. Web applications that prevent their content from being embedded in an iframe cannot be displayed in the Web control.
+
+If the Industrial Edge application or dashboard is not displayed, verify the following points:
 
 * The configured URL is correct.
 * The URL can be reached from the runtime client.
 * The Industrial Edge application is running.
-* The user has the required permissions to access the dashboard.
+* The user has the required permissions to access the application or dashboard.
 * Required certificates or browser permissions have been accepted.
-* The dashboard can be opened directly in a browser outside of WinCC Unified Runtime.
+* The target application allows its content to be displayed in an iframe.
+* The application or dashboard can be opened directly in a browser outside of WinCC Unified Runtime.
 
 
 ## Connect WinCC Unified Runtime on Edge with IIH via OPC UA
