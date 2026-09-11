@@ -186,57 +186,65 @@ After the file has been uploaded, click **Update Now** to transfer the configura
 
 ## Alarms
 
-The alarms are created at the desired trigger tag - in this case at an internal tag. We can create two different types: analog and discrete alarms. The alarm type depends on the selected tag data type. For this example we are creating both.
+WinCC Unified supports both analog and discrete alarms. The alarm type and trigger configuration depend on the tag and its data type.
 
-For the analog alarms, an 'Int' tag is created:
+In this example, internal HMI tags are used to trigger both alarm types.
 
-![alarms1](graphics/alarms1.png)
+For the analog alarm example, create an `Int` tag:
 
-On the bottom menu, tab 'Analog alarms', we create all the alarms we need with it's conditions:
+![Create the tag used for analog alarms](graphics/alarms1.png)
 
-![alarms2](graphics/alarms2.png)
+Open the **Analog alarms** tab and create the required alarms. Configure the trigger tag and the corresponding alarm conditions:
 
-For the discrete alarms, the creation is made in the same way, but the data type must be 'Word'. On the bottom menu, tab 'Analog alarms', the alarms are created:
+![Configure analog alarms](graphics/alarms2.png)
 
-![alarms4](graphics/alarms3.png)
+For discrete alarms, create or use a tag with a suitable data type, such as `Word`, and configure the alarms in the **Discrete alarms** tab:
 
-In this example, we are creating another screen with alarm control screen item and some different buttons to trigger different alarms:
+![Configure discrete alarms](graphics/alarms3.png)
 
-![alarms5](graphics/alarms5_new.png)
+To display the alarms in Runtime, add an **Alarm control** to a screen.
 
-When the runtime is active and the alarms are raised, they will appear in the alarm control:
+In this example, buttons are also added to the screen to trigger the configured alarms:
 
-![alarms6](graphics/alarms6.png)
+![Configure an Alarm control and alarm trigger buttons](graphics/alarms5_new.png)
+
+When the Runtime project is running and an alarm is triggered, the corresponding alarm appears in the Alarm control:
+
+![Display alarms in Runtime](graphics/alarms6.png)
 
 ## Logs
 
-The logs can be created for each tag - in this case at an internal tag. We can choose two different logging modes: 'Cyclic' and 'On change'.
+HMI tags can be logged to record their values over time.
 
-Create a logging with 'Cyclic' mode. On the bottom menu, tab 'Logging tags', the logging is created. 
+In this example, an internal HMI tag is used to demonstrate two logging modes: **Cyclic** and **On change**.
 
-![logs1](graphics/logs1.png)
+Open the **Logging tags** configuration and create a logging tag with **Cyclic** acquisition mode:
 
-Create a logging with 'On change' mode:
+![Configure cyclic tag logging](graphics/logs1.png)
 
-![logs3](graphics/logs2.png)
+A logging tag can also be configured with **On change** acquisition mode:
 
-Finally the logs are shown in the runtime:
+![Configure on-change tag logging](graphics/logs2.png)
 
-![logs6](graphics/logs6.png)
+After the Runtime project has been started and values have been logged, the recorded data can be displayed in Runtime:
+
+![Display logged values in Runtime](graphics/logs6.png)
 
 ## Trends
 
-To add a trend go to the Toolbox, select trend control and drag and drop into the screen:
+To visualize current or logged tag values over time, add a **Trend control** to a screen.
 
-![trends1](graphics/trends1.png)
+In the **Toolbox**, select the Trend control and drag it onto the required screen:
 
-In its properties to add different trends to appear in the item, go to Trends and select the tag/logging tag you want to control::
+![Add a Trend control to a screen](graphics/trends1.png)
 
-![trends2](graphics/trends2.png)
+Select the Trend control and open its **Trends** properties. Add the required tag or logging tag as a data source:
 
-In the runtime the trend will be filled:
+![Configure a trend data source](graphics/trends2.png)
 
-![trends4](graphics/trends4.png)
+After the Runtime project has been started, the configured values are displayed in the Trend control:
+
+![Display trend data in Runtime](graphics/trends4.png)
 
 ## Further engineering workflows
 
