@@ -30,45 +30,49 @@
 
 ## Installation
 
-Download the app "WinCC Unified Runtime for Industrial Edge" from the Industrial Edge HUB into your Industrial Edge Management. The application should now be available in the IEM catalog.
+Download **SIMATIC WinCC Unified Runtime for Industrial Edge** from the Industrial Edge Hub to your Industrial Edge Management (IEM). The application is then available in the IEM catalog.
 
-1. Login on the IEM where you control your IED
-2. Go to the catalog
-3. Open the app "WinCC Unified Runtime" and install it on your IED
-4. Login to the IED where you installed the apps
-5. Click on the app icon of "WinCC Unified Runtime" to open this app
+To install the application on an Industrial Edge Device:
+
+1. Sign in to the IEM that manages the target Industrial Edge Device.
+2. Open the **Catalog**.
+3. Select **SIMATIC WinCC Unified Runtime** and install it on the target Industrial Edge Device.
+4. Sign in to the Industrial Edge Device after the installation has completed.
+5. Open the **Apps** page and select **SIMATIC WinCC Unified Runtime**.
 
 ## Creating a project
 
-Once you are in the TIA Portal you can click on **Project** -> **New** to start a new engineering project:
+In TIA Portal, select **Project > New** to create a new engineering project:
 
-![createproject1](graphics/createproject1.png)
+![Create a new project](graphics/createproject1.png)
 
-Now you will a popup asking for the Project Name and folder where you want to store your created project where you can click **Create** and start working on it:
+Enter the project name and select the folder where the project should be stored. Then click **Create**:
 
-![createproject2](graphics/createproject2.png)
+![Configure the new project](graphics/createproject2.png)
 
 ## Creating a device
 
-After creating a project, open the project view. The project tree on the left displays all configured devices. Click **Add new device** to create a device.
+After creating the project, open the project view.
 
-Add the **Unified Edge Device V21.0.1.0** from the device catalog.
+In the project tree, select **Add new device**.
 
-![device1](graphics/device1.png)
+Add **Unified Edge Device V21.0.1.0** from the device catalog:
+
+![Add a Unified Edge Device](graphics/device1.png)
 
 ## Creating a screen
 
-Once we have created a device, its properties are shown when it is accessed:
+After adding the Unified Edge Device, expand the device in the project tree:
 
-![createscreen1](graphics/createscreen1.png)
+![Open the Unified Edge Device](graphics/createscreen1.png)
 
-In the left side menu, click on **Screens** and then click on **Add new screen** button to add a new one:
+Open **Screens** and select **Add new screen**:
 
-![createscreen2](graphics/createscreen2.png)
+![Add a new screen](graphics/createscreen2.png)
 
-Now the created screen will appear under **Screens** and, since it is the first screen created, the screen will be set as the **Start Screen**:
+The newly created screen appears under **Screens**. If it is the first screen created for the device, it is automatically configured as the **Start Screen**:
 
-![createscreen3](graphics/createscreen3.png)
+![Created start screen](graphics/createscreen3.png)
 
 ## Screen items
 
