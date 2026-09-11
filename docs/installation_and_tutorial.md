@@ -76,57 +76,65 @@ The newly created screen appears under **Screens**. If it is the first screen cr
 
 ## Screen items
 
-Once the screen is created and opened, items can be created by drag and drop from the toolbox:
+Open the required screen in TIA Portal.
 
-![screenitems1](graphics/screenitmes1_new.png)
+Screen objects can be added by dragging them from the **Toolbox** onto the screen:
 
-Place the item in the screen area and when it is created you will see all the properties of the item:
+![Add a screen object from the Toolbox](graphics/screenitmes1_new.png)
 
-![screenitems3](graphics/screenitmes3_new.jpg)
+Select a screen object to view and configure its properties:
+
+![Configure the properties of a screen object](graphics/screenitmes3_new.jpg)
 
 ## Connections
 
-To create a connection between the Industrial Edge device and a PLC, an Ethernet communication module is required to be added to the device:
+To configure communication between the Unified Edge Device and a PLC, add the required communication module to the device:
 
-![connections1](graphics/connections1.png)
+![Add a communication module](graphics/connections1.png)
 
-Connect the ports from the PLC to the added communication module in the **Network** view and in the **Connection** view:
+In the **Network view**, connect the PLC interface to the communication module of the Unified Edge Device. Then configure the corresponding connection in the **Connections** view:
 
-![connections2](graphics/connections2.png)
+![Configure the PLC connection](graphics/connections2.png)
 
 ## Tags
 
-There are different ways to create tags in our WinCC Unified project for Industrial Edge.
+WinCC Unified projects can use both tags connected to external data sources and internal HMI tags.
 
-### Create tags out of connection
+### Create tags from a connection
 
-When we establish a connection to a PLC, we can drag and drop a tag from the PLC to the HMI Tags:
+After a connection to the PLC has been configured, PLC tags can be added to the WinCC Unified project.
 
-![tags3](graphics/tags/tags3.png)
+Drag the required PLC tag into an HMI tag table:
+
+![Create an HMI tag from a PLC tag](graphics/tags/tags3.png)
 
 ### Create internal tags
 
-Also internal tags can be manually created in a HMI Tag Table and connection type must be set to **Internal Tag**:
+Internal tags can also be created manually in an HMI tag table.
 
-![tags1](graphics/tags/tags1.png)
+Create the required tag and set its connection to **Internal tag**:
+
+![Create an internal HMI tag](graphics/tags/tags1.png)
 
 ## Connect tags to screen items
 
-Once the tags are created, they can be connected to the screen items. Insert a screen item:
+HMI tags can be used to dynamize properties of screen objects.
 
-![tagstoscreen1](graphics/tags/tagstoscreen1_new.jpg)
+Select the required screen object:
 
-In properties go to three dots of the dynamization rectangle and select **Tag**:
+![Select a screen object](graphics/tags/tagstoscreen1_new.jpg)
 
-![tagstoscreen2](graphics/tags/tagstoscreen2-1.jpg)
+In the **Properties** tab, open the dynamization dialog for the required property and select **Tag**:
 
-Select 'Tag...' and then choose a tag that you want to connect:
+![Configure tag dynamization](graphics/tags/tagstoscreen2-1.jpg)
 
-![tagstoscreen3](graphics/tags/tagstoscreen3.png)
+Select the HMI tag that should be assigned to the property:
 
-Repeat the process for any screen item that you want to connect. You can easily Drag & Drop a tag into your screen to create automatically an IO-field with connected HMI tag:
+![Select an HMI tag](graphics/tags/tagstoscreen3.png)
 
-![tagstoscreen4](graphics/tags/tagstoscreen4.jpg)
+Alternatively, drag an HMI tag directly onto the screen. TIA Portal automatically creates an I/O field connected to the selected tag:
+
+![Create an I/O field by dragging an HMI tag onto the screen](graphics/tags/tagstoscreen4.jpg)
 
 ## OPC UA Server
 
